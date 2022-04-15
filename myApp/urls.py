@@ -1,10 +1,11 @@
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 from myApp.AdministratorView import Administrator_list,Administrator_detail
-from myApp.ItemView import Full_item, ItemDetail, ItemList
+from myApp.ItemView import All_full_items, Full_item, ItemDetail, ItemList
 from myApp.ImageView import*
 from myApp.UserView import*
 from myApp.loginView import*
+
 
 
 urlpatterns = [
@@ -19,6 +20,7 @@ urlpatterns = [
     path('item/', ItemList.as_view()),
     path('item/<int:pk>/', ItemDetail.as_view()),
     path('fullItem/<int:pk>/', Full_item),
+    path('items/', All_full_items),
     
 
 

@@ -31,6 +31,7 @@ class Item(models.Model):
     price = models.DecimalField(max_digits=12, decimal_places=3)
     state = models.BooleanField(default=True)
     seller = models.ForeignKey(User,on_delete=models.CASCADE)
+    emplacement=models.CharField(max_length=100,default="tunis")
     uploadDate = models.DateTimeField(default=datetime.now)
     def __str__(self):
         return self.title
