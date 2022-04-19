@@ -5,6 +5,7 @@ from myApp.ItemView import All_full_items, Full_item, ItemDetail, ItemList
 from myApp.ImageView import*
 from myApp.UserView import*
 from myApp.loginView import*
+from myApp.ReportView import*
 
 
 
@@ -24,8 +25,8 @@ urlpatterns = [
     
 
 
-    path('report/', ItemList.as_view()),
-    path('report/<int:pk>/', ItemDetail.as_view()),
+    path('report/', ReportList.as_view()),
+    path('report/<int:pk>/', ReportDetail.as_view()),
 
 
     path('image/<int:pk>/',Image_details),
