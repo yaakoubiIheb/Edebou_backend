@@ -52,7 +52,7 @@ class Report(models.Model):
 
 class Image(models.Model):
     itemId = models.ForeignKey(Item,on_delete=models.CASCADE)
-    imageData=models.ImageField(upload_to ='uploads/')
+    imageData=models.TextField(blank=False)
     def __int__(self):
         return self.itemId
 

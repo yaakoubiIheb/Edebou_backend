@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'myApp',
     'rest_framework',  # for rest api
     'corsheaders',  # for cors policies
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
