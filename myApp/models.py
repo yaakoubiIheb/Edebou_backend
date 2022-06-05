@@ -16,11 +16,7 @@ class User(models.Model):
 
 
 
-class Administrator(models.Model):
-    username = models.CharField(max_length=30,primary_key=True)
-    password = models.CharField(max_length=100,blank=False)
-    def __str__(self):
-        return self.username
+
 
 
 

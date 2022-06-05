@@ -1,6 +1,5 @@
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
-from myApp.AdministratorView import Administrator_list,Administrator_detail
 from myApp.ItemView import*
 from myApp.ImageView import *
 from myApp.UserView import*
@@ -10,8 +9,7 @@ from myApp.ReportView import*
 
 
 urlpatterns = [
-    path('administrator/',Administrator_list),
-    path('administrator/<slug:pk>/',Administrator_detail),
+    
     
 
     path('user/', UserList.as_view()),
@@ -34,7 +32,7 @@ urlpatterns = [
     
 
 
-    path('login/admin/<slug:username>/<slug:password>/',Log_In_admin),
+    
     path('login/user/<slug:username>/<slug:password>/',Log_In_user),
     
 ]
